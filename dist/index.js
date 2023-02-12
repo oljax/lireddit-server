@@ -28,7 +28,7 @@ const main = async () => {
     const session = require("express-session");
     let RedisStore = require("connect-redis")(session);
     let redis = new ioredis_1.default(process.env.REDIS_URL);
-    app.set("proxy", 1);
+    app.set("trust proxy", 1);
     app.use((0, cors_1.default)({
         origin: process.env.CORS_ORIGIN,
         credentials: true,
