@@ -44,6 +44,7 @@ const main = async () => {
             httpOnly: true,
             sameSite: "lax",
             secure: constants_1.__prod__,
+            domain: constants_1.__prod__ ? ".onrender.com" : undefined,
         },
         saveUninitialized: false,
         secret: process.env.SESSION_SECRET,
